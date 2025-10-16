@@ -1,4 +1,3 @@
-
 console.log("✅ main.js is connected!");
 
 // Floating particles
@@ -37,7 +36,7 @@ document.querySelector('.scroll-indicator').addEventListener('click', () => {
     });
 });
 
-// Gallery Lightbox with Navigation
+// Gallery Lightbox with Navigation + Mobile Swipe
 (function() {
     console.log("🎨 Gallery script initializing...");
 
@@ -129,7 +128,32 @@ document.querySelector('.scroll-indicator').addEventListener('click', () => {
         if (e.key === 'ArrowLeft') showPrev();
     });
 
-    console.log("✅ Gallery lightbox ready!");
+    // 👉 Add Mobile Swipe Support
+    let startX = 0;
+    let endX = 0;
+
+    lightbox.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    lightbox.addEventListener('touchmove', (e) => {
+        endX = e.touches[0].clientX;
+    });
+
+    lightbox.addEventListener('touchend', () => {
+        const diff = startX - endX;
+        if (Math.abs(diff) > 50) { // minimum swipe distance
+            if (diff > 0) {
+                showNext(); // swipe left
+            } else {
+                showPrev(); // swipe right
+            }
+        }
+        startX = 0;
+        endX = 0;
+    });
+
+    console.log("✅ Gallery lightbox ready with mobile swipe!");
 })();
 
 // Smooth scrolling for all anchor links

@@ -39,7 +39,6 @@ body {
     100% { transform: translate(100px, -100vh); opacity: 0; }
 }
 
-/* Fixed navigation bar - IMPROVED */
 .nav-bar {
     position: fixed;
     top: 0;
@@ -165,7 +164,6 @@ body {
     display: flex;
 }
 
-/* Header - IMPROVED for mobile */
 .header {
     position: relative;
     height: 100vh;
@@ -254,7 +252,7 @@ body {
     font-weight: 300;
 }
 
-/* Quick Action Buttons - NEW */
+/* Quick Action Buttons */
 .quick-actions {
     display: flex;
     gap: 1rem;
@@ -364,7 +362,6 @@ body {
     letter-spacing: 0.1em;
 }
 
-/* Section improvements */
 .section {
     position: relative;
     z-index: 1;
@@ -415,7 +412,6 @@ body {
     background: #00ff00;
 }
 
-/* Services Grid - IMPROVED for mobile */
 .services-masonry {
     max-width: 1400px;
     margin: 0 auto;
@@ -480,7 +476,6 @@ body {
     flex-grow: 1;
 }
 
-/* Referral Section - IMPROVED */
 .referral {
     background: #0a0a0a;
     position: relative;
@@ -548,7 +543,6 @@ body {
     border-radius: 50%;
 }
 
-/* Gallery Section - Already good, small tweaks */
 .gallery {
     background: #ffffff;
     color: #000;
@@ -576,7 +570,6 @@ body {
 }
 
 .gallery-item-new::before {
-    content: '🔍';
     position: absolute;
     top: 50%;
     left: 50%;
@@ -623,7 +616,7 @@ body {
     transform: scale(1.1);
 }
 
-/* Lightbox - already good */
+
 .lightbox {
     display: none;
     position: fixed;
@@ -721,7 +714,6 @@ body {
     border-radius: 20px;
 }
 
-/* Contact Section - IMPROVED */
 .contact {
     background: #0a0a0a;
     padding: 6rem 2rem;
